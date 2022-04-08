@@ -1,9 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-#Main - entry point
 /**
- * main
+ * main - entry point
+ *
  *
  * Return: Always (Success)
  */
