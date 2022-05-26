@@ -1,4 +1,4 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
  * flip_bits - counts the number of bits to change
@@ -11,13 +11,13 @@
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	int i, count = 0;
-	unsigned long int firstn;
-	unsigned long int new_number = n ^ m;
+	unsigned long int current;
+	unsigned long int exclusive = n ^ m;
 
 	for (i = 50; i >= 0; i--)
 	{
-		firstn = new_number >> i;
-		if (firstn & 1)
+		current = exclusive >> i;
+		if (current & 1)
 			count++;
 	}
 
