@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /*
  * add - adding number
  * @input a
@@ -21,6 +22,7 @@ int mul(int a, int b)
 	return (a * b);
 }
 
+
 /*
  * sub - substracts  number
  * Return: returns the difference of a and b
@@ -30,6 +32,7 @@ int sub(int a, int b)
 	return (a - b);
 }
 
+
 /*
  * mod - adds number
  * Return: returns the modula of a and b
@@ -38,6 +41,7 @@ int mod(int a, int b)
 {
 	return (a % b);
 }
+
 
 /*
  * div -  number
