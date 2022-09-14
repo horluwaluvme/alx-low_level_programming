@@ -1,31 +1,38 @@
 #!/usr/bin/python3
-"""Module that calculates the perimeter of an island in a grid."""
 
-
-def num_water_neighbors(grid, i, j):
-    """Returns the number of water neighbors a cell has in a grid."""
-
-    num = 0
-
-    if i <= 0 or not grid[i - 1][j]:
-        num += 1
-    if j <= 0 or not grid[i][j - 1]:
-        num += 1
-    if j >= len(grid[i]) - 1 or not grid[i][j + 1]:
-        num += 1
-    if i >= len(grid) - 1 or not grid[i + 1][j]:
-        num += 1
-
-    return num
+"""
+Module Island Perimeter
+"""
 
 
 def island_perimeter(grid):
-    """Returns the perimeter of the island in grid."""
-
-    perim = 0
-    for i in range(len(grid)):
-        for j in range(len(grid[i])):
-            if grid[i][j]:
-                perim += num_water_neighbors(grid, i, j)
-
-    return perim
+    """ Calculate perimeter of grid of an island
+     The grid represents water by 0 and land by 1.
+    Args:
+        grid (list): A list of list of integers representing an island.
+    Returns:
+        The perimeter of the island defined in grid.
+    """
+    p = 0
+    height = len(grid)
+    width = len(grid[0])
+    for lth in range(height):
+        for bth in range(width):
+            if (grid[lth][bth] == 1):
+                if (lth == 0):
+                    p += 1
+                if (grid[lth - 1][bth]) == 0:
+                    p += 1  # top surrounded by water
+                if (lth == (height - 1)):
+                    p += 1
+                if (grid[lth + 1][bth]) == 0:
+                    p += 1  # bottom surrounded by water
+                if (bth == 0):
+                    p += 1
+                if (grid[lth][bth - 1] == 0):
+                    p += 1  # left surrounded by water
+                if (bth == (width - 1)):
+                    p += 1
+                if (grid[lth][bth + 1]) == 0:
+                    p += 1  # right surrounded by water
+    return p
