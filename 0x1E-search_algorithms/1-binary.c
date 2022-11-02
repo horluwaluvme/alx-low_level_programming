@@ -68,4 +68,3 @@ void array_print(int *array, size_t lo, size_t hi)
 	}
 	printf("\n");
 }
-
