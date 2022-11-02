@@ -13,6 +13,7 @@
  * Return: the index of the value if found,
  * or -1 if not found
  */
+
 int binary_search(int *array, size_t size, int value)
 {
 	if (!array || size == 0)
@@ -23,7 +24,7 @@ int binary_search(int *array, size_t size, int value)
 
 /**
  * help_binary - searches for a value in an array of
-* integers using recurssion
+* integers using recursion
  * @array: array that contains the values
  * @size: size of array
  * @value: value to look for in the aray
@@ -31,6 +32,7 @@ int binary_search(int *array, size_t size, int value)
  * Return: the index of the value if found,
  * or -1 if not found
  */
+
 int help_binary(int *array, int value, size_t lo, size_t hi)
 {
 	size_t mid;
@@ -55,6 +57,7 @@ int help_binary(int *array, int value, size_t lo, size_t hi)
  * @lo:low bound index
  * @hi:high bound index
  */
+
 void array_print(int *array, size_t lo, size_t hi)
 {
 	size_t i;
